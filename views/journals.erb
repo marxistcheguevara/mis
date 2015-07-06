@@ -1,0 +1,26 @@
+
+	<h1>
+		Journals
+	</h1>
+	
+	<a href="/journals/new">New Journal </a>
+
+	<% if @journals.any? %>
+
+		<ul class="journal">
+			<% @journals.each do |journal| %>
+				<li><a href="journals/<%= journal.id%>"> No:<%= journal.id %> </a>|
+				Patient: <%= journal.lname %> <%= journal.fname %> <%= journal.mname %>|
+				<% if journal.assigned_doctor.nil? %>
+					Doctor not assigned yet
+				<% else %>
+					Assigned Doctor: <%= journal.assigned_doctor %>
+				<% end %>	
+				</li>
+			<% end %>	
+		</ul>
+	<% else %>
+		<p>No journal records</p>
+
+
+	<% end %>	

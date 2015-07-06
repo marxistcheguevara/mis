@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="/css/main.css">
+<title> <%= @title %> </title>
+</head>
+<body>
+<div id="maincontainer">
+
+<div id="topsection"><div class="innertube"><%= erb :nav %></div></div>
+
+<div id="contentwrapper">
+	<div id="contentcolumn">
+	<div class="innertube"><%= yield %></div>
+	</div>
+</div>
+
+<div id="leftcolumn">
+<div class="innertube"> <%= erb :leftcolumn %> </div>
+</div>
+
+<div id="rightcolumn">
+<div class="innertube"> <%= erb :notifications %> </div>
+</div>
+
+<div id="footer">Footer</a></div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<label for="title">Identity Card Number</label>
+<input id="#identity" type="number" name="journal[identity]" value="<%= @journal.identity  unless @journal.nil? %>" />
+
+<label for="fname">Name</label>
+<input id="#fname" type = "text" name="journal[fname]" value="<%= @journal.fname  unless @journal.nil? %>" />
+
+<label for="lname">Surname</label>
+<input id="#lname" type = "text" name="journal[lname]" value="<%= @journal.lname  unless @journal.nil? %>" />
+
+<label for="mname">Paternal Name</label>
+<input id="#mname" type = "text" name="journal[mname]" value="<%= @journal.mname  unless @journal.nil? %>" />
+
+
+<label for="detail_one">Additional detail</label>
+<textarea id="#detail_one" name="journal[detail_one]" /><%= @journal.detail_one unless @journal.nil? %></textarea>
+
+<label for="detail_two">Additional detail(2)</label>
+<textarea id="#detail_two" name="journal[detail_two]" /><%= @journal.detail_two unless @journal.nil? %></textarea>
+
+<label for="detail_three">Additional detail(3)</label>
+<textarea id="#detail_three" name="journal[detail_three]" /><%= @journal.detail_three unless @journal.nil? %></textarea>
+
+<% if session[:user].role == 1 %>
+	<% if @journal.viewed == false %>
+<label for="assigned_doctor">Doctor</label>
+<input id="#assigned_doctor" type = "text" name="journal[assigned_doctor]" />
+	<% else %>
+		<label for="assigned_doctor">Doctor</label>
+<input id="#assigned_doctor" type = "text" name="journal[assigned_doctor]" value="<%= @journal.lname  unless @journal.lname.nil? %>" />
+	<% end %>
+
+<% end %>
+
+<input type="submit" value="Submit"> 

@@ -1,0 +1,19 @@
+<h1>
+	Patient:  <%= @journal.lname %> <%= @journal.fname %> <%= @journal.mname %>
+</h1>
+
+<p>Date: <% if @journal.created %><%= @journal.created.strftime("%e %B %Y") %><% end %> </p>
+
+
+<pre><strong> Lorem </strong><%= @journal.detail_four %></pre>
+
+<pre><strong>İpsum:</strong> <%= @journal.detail_one %></pre>
+
+<pre><strong> Dolor: </strong><%= @journal.detail_two %></pre>
+
+<pre><strong> Amet: </strong><%= @journal.detail_three %></pre>
+
+
+
+<p><a href="/journals">All journals</a></p>
+<p><a href="/journals/<%= @journal.id %>/edit">Edit</a></p>

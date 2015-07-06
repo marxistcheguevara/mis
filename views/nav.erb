@@ -1,0 +1,3 @@
+		
+			<a href="/">Main</a> | <a href="/contact">Link1</a> | <a href="/about">Link2</a> | <a href="/profile">Administration Page</a> | <% if authorized? %> <p align="right"><%= session[:user].rolename %> <%= session[:user].fname %> <%= session[:user].lname %> | <a href="/logout">Logout</a></p><% end %>
+		

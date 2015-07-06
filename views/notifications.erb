@@ -1,0 +1,6 @@
+<strong>notifications </strong>
+	<ol>
+		<% Journal.all.each do |journal| %>
+		<li><a href="/journals/<%= journal.id %>">Patient added</a></li>
+		<% end %>
+	</ol>

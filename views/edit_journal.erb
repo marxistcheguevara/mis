@@ -1,0 +1,9 @@
+<h1>
+	Edit
+</h1>
+
+<form method="POST" action="/journals/<%= @journal.id %>">
+
+	<input type="hidden" name="_method" value="PUT">	
+	<%= erb :journal_form %>
+</form>

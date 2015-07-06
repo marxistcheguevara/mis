@@ -1,0 +1,14 @@
+
+
+<% if session[:user].role == 1 %>
+	<%= erb :assign_doctor %>
+<% elsif session[:user].role == 2 %>
+	<%= erb :new_journal %>
+<% elsif session[:user].role == 3 %>
+	<pre>
+		<img src="/images/nurse.jpeg">		
+	</pre>
+<% elsif session[:user].role == 4 %>
+	<%= erb :doctor_screen %>
+
+<% end %>
